@@ -6,7 +6,7 @@ import java.util.Stack;
 public class Solution {
     public static void main(String[] args) {
 
-        System.out.println(AddBinaryProblem67.addBinarySol1("100","110010"));
+        System.out.println(SqrtIntegerProblem69.solution1(4));
 
 
     }
