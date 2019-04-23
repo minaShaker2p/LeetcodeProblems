@@ -1,3 +1,5 @@
+import helpers.ListNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -5,6 +7,19 @@ import java.util.Stack;
 
 public class Solution {
     public static void main(String[] args) {
+        ListNode head = new ListNode(1);
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(1);
+        ListNode l3 = new ListNode(2);
+        ListNode l4 = new ListNode(3);
+        ListNode l5 = new ListNode(3);
+        head.next = l1;
+        l1.next = l2;
+        l2.next=l3;
+        l3.next=l4;
+        l4.next=l5;
+        l5.next = null;
+        RemoveDuplicateLinkedListProblem83.deleteDuplicates(head);
 
         System.out.println(ClimbingStairsProblem70.solution(4));
 
@@ -53,24 +68,23 @@ public class Solution {
 
     }
 
-    public  static int romanToInt(String s) {
-        HashMap<Character, Integer> romanValues=new HashMap<>();
-        romanValues.put('I',1);
-        romanValues.put('V',5);
-        romanValues.put('X',10);
-        romanValues.put('L',50);
-        romanValues.put('C',100);
-        romanValues.put('D',500);
-        romanValues.put('M',1000);
-        char[] chars =s.toCharArray();
+    public static int romanToInt(String s) {
+        HashMap<Character, Integer> romanValues = new HashMap<>();
+        romanValues.put('I', 1);
+        romanValues.put('V', 5);
+        romanValues.put('X', 10);
+        romanValues.put('L', 50);
+        romanValues.put('C', 100);
+        romanValues.put('D', 500);
+        romanValues.put('M', 1000);
+        char[] chars = s.toCharArray();
 
-        int result=romanValues.get(chars[chars.length-1]);
-        for(int i=chars.length-2; i >=0;i--)
-        {
-            if(romanValues.get(chars[i]) >=romanValues.get(chars[i+1]))
-                result+=romanValues.get(chars[i]);
+        int result = romanValues.get(chars[chars.length - 1]);
+        for (int i = chars.length - 2; i >= 0; i--) {
+            if (romanValues.get(chars[i]) >= romanValues.get(chars[i + 1]))
+                result += romanValues.get(chars[i]);
             else
-                result-=romanValues.get(chars[i]);
+                result -= romanValues.get(chars[i]);
 
         }
 
@@ -100,11 +114,10 @@ public class Solution {
 
     }
 
-    static String countnndSay(int n)
-    {
+    static String countnndSay(int n) {
         // Base cases
-        if (n == 1)     return "1";
-        if (n == 2)     return "11";
+        if (n == 1) return "1";
+        if (n == 2) return "11";
 
         // Find n'th term by generating
         // all terms from 3 to n-1.
@@ -113,8 +126,7 @@ public class Solution {
 
         // Initialize previous term
         StringBuilder str = new StringBuilder("11");
-        for (int i = 3; i <= n; i++)
-        {
+        for (int i = 3; i <= n; i++) {
             // In below for loop, previous
             // character is processed in
             // current iteration. That is
@@ -128,16 +140,14 @@ public class Solution {
             // of matching chars
             StringBuilder tmp = new StringBuilder(); // Initialize i'th
             // term in series
-            char []arr = str.toString().toCharArray();
+            char[] arr = str.toString().toCharArray();
 
             // Process previous term
             // to find the next term
-            for (int j = 1; j < len; j++)
-            {
+            for (int j = 1; j < len; j++) {
                 // If current character
                 // does't match
-                if (arr[j] != arr[j - 1])
-                {
+                if (arr[j] != arr[j - 1]) {
                     // Append count of
                     // str[j-1] to temp
                     tmp.append(cnt);
