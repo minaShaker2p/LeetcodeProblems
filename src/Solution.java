@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Solution {
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
+/*        ListNode head = new ListNode(1);
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(1);
         ListNode l3 = new ListNode(2);
@@ -21,7 +21,9 @@ public class Solution {
         l5.next = null;
         RemoveDuplicateLinkedListProblem83.deleteDuplicates(head);
 
-        System.out.println(ClimbingStairsProblem70.solution(4));
+        System.out.println(ClimbingStairsProblem70.solution(4));*/
+
+      MergeSortedArrayProblem88.merge(new int[]{1,2,3,0,0,0},3,new int[]{2,5,6},3);
 
 
     }
