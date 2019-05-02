@@ -23,7 +23,8 @@ public class Solution {
 
         System.out.println(ClimbingStairsProblem70.solution(4));*/
 
-      MergeSortedArrayProblem88.merge(new int[]{1,2,3,0,0,0},3,new int[]{2,5,6},3);
+     int [] nums={4,1,2,2,1};
+      System.out.println("Value is "+SingleNumberProblem136.singleNumber(nums));
 
 
     }
