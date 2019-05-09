@@ -1,4 +1,5 @@
 import helpers.ListNode;
+import helpers.TreeNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,24 +8,16 @@ import java.util.Stack;
 
 public class Solution {
     public static void main(String[] args) {
-/*        ListNode head = new ListNode(1);
-        ListNode l1 = new ListNode(1);
-        ListNode l2 = new ListNode(1);
-        ListNode l3 = new ListNode(2);
-        ListNode l4 = new ListNode(3);
-        ListNode l5 = new ListNode(3);
-        head.next = l1;
-        l1.next = l2;
-        l2.next=l3;
-        l3.next=l4;
-        l4.next=l5;
-        l5.next = null;
-        RemoveDuplicateLinkedListProblem83.deleteDuplicates(head);
+        TreeNode root1=new TreeNode(1);
+        TreeNode nodeLetf1=new TreeNode(2);
+        root1.left=nodeLetf1;
+        TreeNode root2=new TreeNode(1);
+        TreeNode nodeRight2=new TreeNode(2);
+        root2.right=nodeRight2;
 
-        System.out.println(ClimbingStairsProblem70.solution(4));*/
+        SameTreeProblem100.isSameTree(root1,root2);
 
-     int [] nums={4,1,2,2,1};
-      System.out.println("Value is "+SingleNumberProblem136.singleNumber(nums));
+
 
 
     }
