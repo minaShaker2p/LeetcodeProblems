@@ -8,14 +8,14 @@ import java.util.Stack;
 
 public class Solution {
     public static void main(String[] args) {
-        TreeNode root1=new TreeNode(1);
-        TreeNode nodeLetf1=new TreeNode(2);
-        root1.left=nodeLetf1;
-        TreeNode root2=new TreeNode(1);
-        TreeNode nodeRight2=new TreeNode(2);
-        root2.right=nodeRight2;
+        TreeNode root=new TreeNode(3);
+        root.left=new TreeNode(9);
+        root.right=new TreeNode(20);
+        root.right.left=new TreeNode(15);
+        root.right.right=new TreeNode(7);
+        BinaryTreeLevelOrderTraversalProblem107.levelOrderBottom(root);
 
-        SameTreeProblem100.isSameTree(root1,root2);
+
 
 
 
